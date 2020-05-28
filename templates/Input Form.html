@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+Form
+    </title>
+  <style>
+body{
+font-size: 10px;
+background:white;
+font-family :'Times New Roman', Times, serif;
+}
+ header{
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(static/ph.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  
+ }
+h2{
+    text-align: center;
+    text-decoration: underline;
+}
+form{
+    width: 300px;
+    background: #fff;
+    padding: 15px 40px 40px;
+    border: 1px solid #ccc;
+    margin: 50px auto 0;
+    border-radius: 5px;
+}
+label{
+    display: block;
+    margin-bottom: 5px;
+}
+label i{
+    color: #999999;
+    font-size: 80%;
+}
+input,select{
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 2px;
+}
+.row{
+    padding-bottom: 10px;
+
+}
+.form-inline{
+    border: 1px solid #ccc;
+    padding: 8px 10px 4px;
+    border-radius: 2px;
+}
+.form-inline label,.form-inline input{
+    display: inline-block;
+    width: auto;
+    padding-right: 15px;
+}
+
+input[type="submit"]{
+    font-size: 110%;
+    font-weight: 100;
+    background: #006dcc;
+    border-color: #016bc1;
+    box-shadow: 0 3px 0 #0165b6;
+    color: #fff;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+input[type="submit"]:hover{
+    background: #0165b6;
+}
+  </style>
+</head>
+<body>
+<header>
+    <form name="contactForm" onsubmit="return validateForm()" action="/predict" method="post">
+        <h2>Input Form</h2>
+        <div class="row">
+            <label>Gender</label>
+            <div class="form-inline">
+                <label><input type="radio" name="gender" value="1"> Male</label>
+                <label><input type="radio" name="gender" value="2"> Female</label>
+            </div>
+            
+        <div class="row">
+            <label>Are you Married ?</label>
+            <div class="form-inline">
+                <label><input type="radio" name="married" value="1"> Yes</label>
+                <label><input type="radio" name="married" value="2"> No</label>
+            </div>
+        </div>
+        <div class="row">
+                <label>No. of dependents</label>
+                <input type="text" name="dependents" placeholder="integer value">
+        </div>
+
+        <div class="row">
+            <label>Educated ?</label>
+            <div class="form-inline">
+                <label><input type="radio" name="educated" value="1"> Yes</label>
+                <label><input type="radio" name="educated" value="2"> No</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <label>Self Employed...?</label>
+            <div class="form-inline">
+                <label><input type="radio" name="self_employment" value="1"> Yes</label>
+                <label><input type="radio" name="self_employment" value="2"> No</label>
+            </div>
+        </div>
+
+        <div class="row">
+                <label>Applicant Income</label>
+                <input type="text" name="Applicant_Income" placeholder="integer">
+        </div>
+
+        <div class="row">
+                <label>Co-Applicant Income</label>
+                <input type="text" name="Coapplicant_Income" placeholder="integer">
+        </div>
+
+        <div class="row">
+                <label>Loan Amount</label>
+                <input type="text" name="Loan_amount" placeholder="integer">
+        </div>
+
+        <div class="row">
+                <label>Loan Amount Term </label>
+                <input type="text" name="Loan_amount_term" placeholder="ex : 360">
+        </div>
+
+        <div class="row">
+                <label>Credit History</label>
+                <input type="text" name="Credit_history" placeholder="ex : 1">
+        </div>
+
+        <div class="row">
+                <label>Property Area</label>
+                <input type="text" name="Property_area" placeholder="ex : 2">
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+     
+</header>
+
+    </body>
+</html>

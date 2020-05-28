@@ -1,0 +1,110 @@
+<!DOCTYTPE html>
+<html>
+<head>
+    <title></title>
+    
+    <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    <link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">
+
+<style>
+*{
+      padding: 0;
+      margin: 0;
+      font-family: 'Cardo', serif;
+  }
+  
+.backImg{
+    width: 100%;
+    height: 100vh;
+    background-image: url(static/fore.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    }
+.profile{
+    width: 360px;
+    backgrounf-color: rgba(0,0,0,0.3);
+    padding: 30px 0;
+    border-radius: 10%;
+    }
+img{
+     height: 250px;
+     border-radius: 70%;
+     margin-bottom: 20px;
+     }
+.profileText{
+    margin-bottom: 30px;
+    
+    }
+.profileText h2{
+    font-size: 2em;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.profileText h3{
+   font-size: 1.4em;
+    font-weight: 500;
+    margin-bottom: 10px;
+} 
+
+i{
+    color: white;
+}
+ ul{
+     float: right;
+     list-style-type: none;
+     margin-top: 25px;
+      }
+ ul li{
+     display: inline-block;
+ }
+ ul li a{
+     text-decoration: none;
+     color: #333;
+     padding: 5px 20px;
+     border: 1px solid transparent;
+     transition: 0.6s ease;
+ }
+ ul li a:hover{
+     background-color: #fff;
+     color:#000;
+ }
+ ul li.active a{
+     background-color: #fff;
+     color:#000;
+     }
+</style>
+
+</head>
+<body>
+<form  action="/about_author" method="POST" >
+<div class="backImg">
+    <div class="profile">
+        <img src="{{ url_for('static', filename='75eca62a-4211-4ebb-b302-38ce7a9d79e1.jpg') }}">
+        
+        <div class="profileText">
+            <h2> Sanjaykumar Dabli </h2>
+            <h3> Karnataka, India </h3>
+            <p> DATASCIENCE ANTHUSIAST </p>
+        </div>
+        
+        <div class="profileFonts">
+            <a href="nn"><i class="fa fa-instagram fa-2x"></i></a>
+            <a href="#"><i class="fa fa-linkedin-square fa-2x"></i></a>
+            <a href="#"><i class="fa fa-google-plus-square fa-2x"></i></a>
+        </div>
+    </div>
+    <div class="main">
+        <ul>
+                <li class="active"><a href="/">HOME</a></li>
+                
+            </ul>
+        </div>
+</div>
+</body>
+</html>
+
+        
